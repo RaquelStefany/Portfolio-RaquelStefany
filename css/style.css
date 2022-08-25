@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    background-image: url(../img/background/Fundo_Desktop.png);
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.perfil{
+    width: 20%;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: white;
+    margin-top: 5%;
+}
+
+.perfil img{
+    width: 100%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.dados{
+    text-align: center;
+    color: #A42A5B;
+}
+
+.dados h1{
+    font-weight: bold;
+    font-size: xx-large;
+    line-height: 80%;
+}
+
+.dados h1 span{
+    font-size: large;
+    font-weight: normal;
+}
+
+.info{
+    text-align: center;
+}
+
+a button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img{
+    margin-right: 5%;
+}
+
+.info button{
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px 0px;
+    padding: 1.5% 15%;
+    margin: 0 5%;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.info button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.icons{
+    width: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.icons a{
+    margin: 0 1%;
+}
+
+.footer p{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    margin-top: 20px;
+    font-size: small;
+}
+
+@media screen and (min-width: 1024px){
+    body {
+        margin: 0 20%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body {
+        background-image: url(../img/background/Fundo_Mobile.png);
+        background-size: 100%;
+        margin: 0 10%;
+    }
+
+    .perfil{
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .info button{
+        padding: 2% 15%;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    body {
+        margin: 0 1%;
+        background-size: 120%;
+    }
+
+    .dados h1{
+        font-size: xx-large;
+    }
+    
+    .dados h1 span{
+        font-size: large;
+    }
+
+    .info button{
+        padding: 3% 25%;
+        width: 95%;
+        margin: 0;
+    }
+
+    .icons {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    body {
+        background-size: 120%;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    body {
+        background-image: url(../img/background/Fundo_Desktop.png);
+        background-size: 150%;
+    }
+}
