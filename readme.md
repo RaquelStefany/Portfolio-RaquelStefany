@@ -41,7 +41,7 @@
     ⭐ Estatísticas
 </h2>
 <a href="https://github.com/RaquelStefany">
-    <img width="50%" src="https://github-readme-stats.vercel.app/api?username=RaquelStefany&show_icons=true&theme=tokyonight"/>
+    <img width="50%" src="https://github-readme-stats.vercel.app/api?username=RaquelStefany&show_icons=true&theme=github_dark&include_all_commits=true&count_private=true"/>
 </a>      
 
 <hr>
