@@ -9,10 +9,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background-color: rgb(255, 255, 255);
 }
@@ -30,7 +26,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -173,6 +169,44 @@ nav .menu-btn {
     }
 }
 
+main .fab {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+main .fab button {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    background-color: #cb60b3;
+    border: none;
+    box-shadow: 0 1px 20px 2px rgb(255 255 255 / 40%);
+    font-size: 24px;
+    color: white;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+
+main .fab button:focus {
+    outline: none;
+}
+
+main .fab button.main {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: black;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
 main #inicio {
     background-image: url(../img/background/Fundo_Desktop5.png);
     background-size: cover;
@@ -274,13 +308,13 @@ main #inicio div #redes-sociais .uil:hover {
 }
 
 @media screen and (max-width: 920px) {
-    main #inicio{
+    main #inicio {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    main #inicio > div{
+    main #inicio>div {
         width: 70%;
         padding: 5em 0;
         align-content: space-between;
@@ -295,7 +329,7 @@ main #inicio div #redes-sociais .uil:hover {
         align-items: center;
     }
 
-    main #inicio>div{
+    main #inicio>div {
         width: 100%;
         height: fit-content;
     }
@@ -306,17 +340,17 @@ main #inicio div #redes-sociais .uil:hover {
         padding: 6em 1em 5em 0.5em;
     }
 
-    main #inicio>div{
+    main #inicio>div {
         width: 90%;
     }
 
-    main #inicio div{
+    main #inicio div {
         padding: 2em 1em;
         margin: 0;
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 325px) {
     main #inicio {
         padding: 6em 0em 5em;
         height: 115vh;
@@ -395,7 +429,7 @@ main #sobre>div #dados div span {
     margin: 5px auto;
 }
 
-main #sobre>div #dados div span strong{
+main #sobre>div #dados div span strong {
     display: block;
 }
 
@@ -426,57 +460,57 @@ main #sobre>div #btn-dados:hover {
     box-shadow: #000000b0 0px 0px 20px 5px;
 }
 
-@media screen and (max-width: 1200px){
-    main #sobre>div #image img{
+@media screen and (max-width: 1200px) {
+    main #sobre>div #image img {
         height: 500px;
         object-fit: cover;
         width: 400px;
     }
 
-    main #sobre>div #dados div{
+    main #sobre>div #dados div {
         width: unset;
         margin-inline-end: 3em;
     }
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 920px) {
     main #sobre {
         padding: 2em 4em 1em;
     }
 
-    main #sobre>div{
+    main #sobre>div {
         display: block;
     }
 
-    main #sobre>div #titulo{
+    main #sobre>div #titulo {
         text-align: center;
         margin: 2em auto;
     }
 
-    main #sobre>div #titulo hr{
+    main #sobre>div #titulo hr {
         display: inline-flex;
     }
 
-    main #sobre>div #image{
+    main #sobre>div #image {
         text-align: center;
     }
 
-    main #sobre>div p{
+    main #sobre>div p {
         margin-inline-start: 0;
         width: 100%;
     }
 
-    main #sobre>div #dados{
+    main #sobre>div #dados {
         margin-inline-start: 0;
         margin: 2em auto;
     }
 
-    main #sobre>div #dados div{
+    main #sobre>div #dados div {
         width: 40%;
         margin-inline-end: unset;
     }
 
-    main #sobre>div #btn-dados{
+    main #sobre>div #btn-dados {
         float: none;
         display: flex;
         justify-content: center;
@@ -484,7 +518,7 @@ main #sobre>div #btn-dados:hover {
         margin: auto;
     }
 
-    main #sobre>div #image img{
+    main #sobre>div #image img {
         height: auto;
         width: auto;
     }
@@ -495,19 +529,19 @@ main #sobre>div #btn-dados:hover {
         padding: 2em;
     }
 
-    main #sobre>div #image img{
+    main #sobre>div #image img {
         width: 100%;
     }
 
-    main #sobre>div p{
+    main #sobre>div p {
         text-align: justify;
     }
 
-    main #sobre>div #dados{
+    main #sobre>div #dados {
         display: grid;
     }
 
-    main #sobre>div #dados div span{
+    main #sobre>div #dados div span {
         width: 80vw;
     }
 }
@@ -519,10 +553,11 @@ main #sobre>div #btn-dados:hover {
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 325px) {
     main #sobre {
         padding: 1em;
     }
+
     main #sobre>div #image img {
         height: 300px;
         width: 250px;
@@ -605,7 +640,7 @@ main #habilidades .skills>div .skill {
     margin: 0.3em 0;
 }
 
-main #habilidades .skills>div .skill p{
+main #habilidades .skills>div .skill p {
     width: 40%;
     text-align: left;
 }
@@ -661,25 +696,25 @@ main #habilidades .skills>div .skill progress::-ms-fill {
     -o-border-radius: 20px;
 }
 
-@media screen and (max-width: 920px){
-    main #habilidades h1 hr{
+@media screen and (max-width: 920px) {
+    main #habilidades h1 hr {
         margin: auto;
         width: 20%;
     }
 
-    main #habilidades .skills>div .skill{
+    main #habilidades .skills>div .skill {
         display: block;
     }
 
-    main #habilidades .skills>div .skill progress{
+    main #habilidades .skills>div .skill progress {
         width: 100%;
     }
 
-    main #habilidades .skills>div .skill p{
+    main #habilidades .skills>div .skill p {
         width: 100%;
     }
 
-    main #habilidades .skills>div{
+    main #habilidades .skills>div {
         width: 45%;
     }
 }
@@ -689,17 +724,17 @@ main #habilidades .skills>div .skill progress::-ms-fill {
         padding: 2em 2em 0em;
     }
 
-    main #habilidades .skills{
+    main #habilidades .skills {
         display: block;
     }
 
-    main #habilidades .skills>div{
+    main #habilidades .skills>div {
         width: 100%;
         margin: 2em 0;
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 325px) {
     main #habilidades {
         padding: 1em;
     }
@@ -710,7 +745,7 @@ main .formacao {
     color: black;
 }
 
-main .formacao h1{
+main .formacao h1 {
     font-size: xx-large;
 }
 
@@ -779,26 +814,26 @@ main .formacao #area .areaFormacao div p {
     margin-top: 1em;
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 920px) {
     main .formacao {
         padding: 2em 5em 1em;
     }
 
-    main .formacao h1{
+    main .formacao h1 {
         text-align: center;
     }
 
-    main .formacao h1 hr{
+    main .formacao h1 hr {
         margin: auto;
         width: 20%;
     }
 
-    main .formacao #area .areaFormacao{
+    main .formacao #area .areaFormacao {
         width: 100%;
         margin: 2em 0;
     }
 
-    main .formacao #area{
+    main .formacao #area {
         display: block;
     }
 }
@@ -808,7 +843,7 @@ main .formacao #area .areaFormacao div p {
         padding: 2em 2em 0em;
     }
 
-    main .formacao #area .areaFormacao{
+    main .formacao #area .areaFormacao {
         padding: 1em 2em 1em 1em;
     }
 
@@ -817,7 +852,7 @@ main .formacao #area .areaFormacao div p {
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 325px) {
     main .formacao {
         padding: 1em;
     }
@@ -833,7 +868,7 @@ main #cursos {
     }
 }
 
-@media screen and (max-width: 325px){
+@media screen and (max-width: 325px) {
     main #cursos {
         padding: 1em;
     }
@@ -887,53 +922,53 @@ main #projetos .projeto:hover {
     -o-transition: all 1s ease;
 }
 
-main #projetos .projeto .dados > div {
+main #projetos .projeto .dados>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-main #projetos .projeto .dados{
+main #projetos .projeto .dados {
     color: black;
     text-align: left;
     width: 80%;
 }
 
-main #projetos .projeto .dados h1{
+main #projetos .projeto .dados h1 {
     text-align: left;
     margin: 0;
 }
 
-main #projetos .projeto .dados span{
+main #projetos .projeto .dados span {
     display: block;
     font-weight: bold;
     margin-top: 1em;
 }
 
-main #projetos .projeto .dados p{
+main #projetos .projeto .dados p {
     display: block;
     margin-top: 0.5em;
 }
 
-main #projetos .projeto .linguagens{
+main #projetos .projeto .linguagens {
     display: flex;
     justify-content: flex-end;
     width: 30%;
     margin-top: 1em;
 }
 
-main #projetos .projeto .linguagens .linguagem{
+main #projetos .projeto .linguagens .linguagem {
     display: grid;
     justify-items: center;
     font-size: small;
 }
 
-main #projetos .projeto .linguagens .linguagem img{
+main #projetos .projeto .linguagens .linguagem img {
     height: 30px;
 }
 
-@media screen and (max-width: 920px){
-    main #projetos h1{
+@media screen and (max-width: 920px) {
+    main #projetos h1 {
         font-size: xx-large;
     }
 
@@ -943,54 +978,54 @@ main #projetos .projeto .linguagens .linguagem img{
         margin-bottom: 2em;
     }
 
-    main #projetos .projeto{
+    main #projetos .projeto {
         flex-direction: column;
     }
 
-    main #projetos .image{
+    main #projetos .image {
         width: 100%;
     }
 
-    main #projetos .projeto{
+    main #projetos .projeto {
         margin: 2em auto 4em;
     }
-    
-    main #projetos .projeto .dados{
+
+    main #projetos .projeto .dados {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 450px){
-    main #projetos{
+@media screen and (max-width: 450px) {
+    main #projetos {
         padding: 4em 2em 2em;
     }
-    
-    main #projetos .projeto .dados > div {
+
+    main #projetos .projeto .dados>div {
         display: block;
     }
-    
+
     main #projetos .projeto .dados p {
         text-align: justify;
     }
 
-    main #projetos .projeto .linguagens{
+    main #projetos .projeto .linguagens {
         width: 60%;
     }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
     main #projetos {
         padding: 4em 1em 2em;
     }
 }
 
-main #contato{
+main #contato {
     padding: 2em 5em 2em;
     background-image: url(../img/background/Fundo_Desktop5.png);
     background-size: cover;
 }
 
-main #contato h1{
+main #contato h1 {
     font-size: xx-large;
     text-align: center;
     text-align: -webkit-center;
@@ -1004,7 +1039,7 @@ main #contato h1 hr {
     display: block;
 }
 
-main #contato > div{
+main #contato>div {
     padding: 3em 2em 3em;
     /* background: rgba(0, 0, 0, 0.795); */
     border-radius: 10px;
@@ -1017,27 +1052,27 @@ main #contato > div{
     align-items: center;
 }
 
-main #contato .contact{
+main #contato .contact {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 1.5em;
 }
 
-main #contato .contact:hover{
+main #contato .contact:hover {
     text-decoration: underline;
 }
 
-main #contato .contact p{
+main #contato .contact p {
     color: white;
 }
 
-main #contato .contact p i{
+main #contato .contact p i {
     font-size: xxx-large;
     margin-inline-end: 1em;
 }
 
-main #contato > a{
+main #contato>a {
     color: white;
     text-decoration: none;
     display: flex;
@@ -1056,7 +1091,7 @@ main #contato > a{
     margin: 3em auto;
 }
 
-main #contato > a:hover{
+main #contato>a:hover {
     background: white;
     color: black;
     font-weight: bold;
@@ -1067,28 +1102,28 @@ main #contato > a:hover{
     -o-transition: all 1s ease;
 }
 
-main #contato a i{
+main #contato a i {
     font-size: x-large;
     margin-right: 5px;
 }
 
-@media screen and (max-width: 920px){
-    main #contato > div{
+@media screen and (max-width: 920px) {
+    main #contato>div {
         justify-content: space-between;
     }
 
-    main #contato .contact p i{
+    main #contato .contact p i {
         margin-inline-end: 0.3em;
     }
 
-    main #contato > a{
+    main #contato>a {
         width: 50%;
         padding: 0.8em 0.5em;
     }
 }
 
-@media screen and (max-width: 450px){
-    main #contato{
+@media screen and (max-width: 450px) {
+    main #contato {
         padding: 4em 4em 2em;
     }
 
@@ -1096,50 +1131,50 @@ main #contato a i{
         width: 30%;
     }
 
-    main #contato > div{
+    main #contato>div {
         display: block;
         padding: 3em 0 2em;
     }
 
-    main #contato > a{
+    main #contato>a {
         width: 80%;
         padding: 1em 0.5em;
     }
 }
 
-@media screen and (max-width: 375px){
-    main #contato{
+@media screen and (max-width: 375px) {
+    main #contato {
         padding: 4em 2.5em 2em;
     }
 
-    main #contato > a{
+    main #contato>a {
         width: 100%;
     }
 
-    main #contato .contact p i{
+    main #contato .contact p i {
         font-size: xx-large;
     }
 }
 
-@media screen and (max-width: 325px){
-    main #contato{
+@media screen and (max-width: 325px) {
+    main #contato {
         padding: 4em 1.5em 2em;
     }
 }
 
-footer{
+footer {
     padding: 6em 4em;
     background: black;
     color: white;
 }
 
-footer > div{
+footer>div {
     display: flex;
     justify-content: space-around;
     margin-bottom: 4em;
 }
 
-footer hr{
+footer hr {
     width: 60%;
     margin: auto 13em;
     border: 3px solid white;
@@ -1150,16 +1185,16 @@ footer hr{
     -o-border-radius: 10px;
 }
 
-footer > div > div{
+footer>div>div {
     display: inline-grid;
     width: 30%;
 }
 
-footer > div > div h3{
+footer>div>div h3 {
     margin-bottom: 1em;
 }
 
-footer div > div .uil{
+footer div>div .uil {
     border: 1px solid white;
     padding: 0.5em;
     border-radius: 15px;
@@ -1174,89 +1209,89 @@ footer div > div .uil{
     margin-inline-end: 0.5em;
 }
 
-footer div > div .uil:hover{
+footer div>div .uil:hover {
     background: white;
     color: black;
     box-shadow: #ffffff7c 0px 0px 20px 0px;
 }
 
-footer #menu{
+footer #menu {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
 }
 
-footer #menu div{
+footer #menu div {
     display: inline-grid;
 }
 
-footer #menu div:nth-child(2){
+footer #menu div:nth-child(2) {
     text-align: right;
 }
 
-footer #menu div a{
+footer #menu div a {
     padding: 0.2em 0;
 }
 
-footer #menu div a:hover{
+footer #menu div a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 920px){
-    footer{
+@media screen and (max-width: 920px) {
+    footer {
         padding: 5em 6em;
     }
 
-    footer > div{
+    footer>div {
         justify-content: space-between;
     }
 
-    footer hr{
+    footer hr {
         width: 80%;
         margin: auto 5em;
     }
 
-    footer #menu{
+    footer #menu {
         justify-content: space-between;
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
     footer {
         padding: 5em 3em;
     }
 
-    footer > div{
+    footer>div {
         display: inline-grid;
         margin-bottom: 0;
     }
 
-    footer > div > div{
+    footer>div>div {
         width: 80vw;
         justify-items: center;
         margin-bottom: 5em;
     }
 
-    footer hr{
+    footer hr {
         width: 80%;
         margin: auto 2em;
     }
 
-    footer #menu{
+    footer #menu {
         width: 75vw;
     }
 
-    footer #menu div{
+    footer #menu div {
         font-size: large;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
     footer {
         padding: 5em 2.5em;
     }
 
-    footer hr{
+    footer hr {
         width: 80%;
         margin: auto 1.5em;
     }
