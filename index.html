@@ -1,77 +1,776 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <script src="./assets/js/typeitjs.js"></script>
 
     <title>
         Raquel Stefany - Desenvolvedora Web
     </title>
+
 </head>
+
 <body>
-    <div style="display: flex; justify-content: center;">
-        <div class="perfil">
-            <img src="./img/Raquel.png">
+
+    <nav>
+        <div class="logo">
+            RaquelStefany
         </div>
-    </div>
-    <div class="dados">
-        <h1>
-            Raquel Stefany
-            <br>
-            <span>
-                Desenvolvedora Web
-            </span>
-        </h1>
-    </div>
-    <br>
-    <div class="info">
-        <a href="https://github.com/RaquelStefany" target="_blank">
-            <button>
-                <img class="icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Raquel-Facebook"/>
-                GitHub
-            </button>
-        </a>
-        <br>
-        <br>
-        <a href="https://www.linkedin.com/in/raquel-stefany-generoso-rodrigues-a51a7a201/" target="_blank">
-            <button>
-                <img class="icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="Raquel-LinkedIn"/>
-                LinkedIn
-            </button>
-        </a>
-        <br>
-        <br>
-        <a href="https://www.instagram.com/raquelrodriguez013/" target="_blank">
-            <button>
-                <img class="icons" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Raquel-Instagram"/>
-                Instagram
-            </button>
-        </a>
-        <br>
-        <br>
-        <a href="https://www.facebook.com/raquelstefany.g/" target="_blank">
-            <button>
-                <img class="icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Raquel-Facebook"/>
-                Facebook
-            </button>
-        </a>
-    </div>
-    <div style="text-align: center;">
-        <div class="footer">
-            <p>
-                Feito por 
-                <a href="https://github.com/RaquelStefany" target="_blank">
-                    Raquel Stefany
+        <div class="menu-btn">
+            <i class="uil uil-bars" onclick="menuShow()"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="#inicio" id="menu-inicio">
+                    Inicio
                 </a>
-            </p>
+            </li>
+            <li>
+                <a href="#sobre" id="menu-sobre">
+                    Sobre
+                </a>
+            </li>
+            <li>
+                <a href="#habilidades" id="menu-habilidades">
+                    Habilidades
+                </a>
+            </li>
+            <li>
+                <a href="#formacao" id="menu-formacao">
+                    Formação
+                </a>
+            </li>
+            <li>
+                <a href="" id="menu-projetos">
+                    Projetos
+                </a>
+            </li>
+            <li>
+                <a href="#contato" id="menu-contato">
+                    Contato
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="inicio">
+            <div data-aos="fade-down" data-aos-duration="800">
+                <div id="image">
+                    <img src="./assets/img/Raquel.png" alt="Foto Raquel Stefany">
+                </div>
+                <h1>
+                    Raquel Stefany
+                </h1>
+                <h4 id="atuacao">
+
+                </h4>
+                <div id="redes-sociais">
+                    <a href="https://github.com/RaquelStefany" target="_blank" class="uil uil-github"></a>
+                    <a href="https://www.linkedin.com/in/raquel-stefany-generoso-rodrigues-a51a7a201/" target="_blank" class="uil uil-linkedin"></a>
+                    <a href="https://www.instagram.com/raquelrodriguez013/" target="_blank" class="uil uil-instagram"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div>
+                <div id="image" data-aos="fade-right" data-aos-duration="800">
+                    <img src="./assets/img/Raquel.png" alt="Foto Raquel Stefany">
+                </div>
+                <div>
+                    <div id="titulo">
+                        <h1>
+                            Sobre Mim
+                        </h1>
+                        <h3>
+                            Desenvolvedora Web Júnior
+                        </h3>
+                        <hr>
+                    </div>
+                    <p>
+                        Meu nome é Raquel Stefany, tenho 19 anos, Técnica formada em Desenvolvimento de Sistemas pela
+                        Etec Doutora Ruth Cardoso, atualmente cursando Tecnólogo em Sistemas para Internet na Fatec
+                        Baixada Santista Rubens Lara.
+                    </p>
+                    <p>
+                        Atualmente estou em busca do meu primeiro emprego na área de programação e/ou informática, para
+                        assim poder aprimorar mais minhas habilidades e experiências.
+                    </p>
+                    <div id="dados" data-aos="fade-right" data-aos-duration="800">
+                        <div>
+                            <span>
+                                <strong>
+                                    Nome:
+                                </strong>
+                                Raquel Stefany
+                            </span>
+                            <br>
+                            <span>
+                                <strong>
+                                    Telefone:
+                                </strong>
+                                (13) 98802-4735
+                            </span>
+                            <br>
+                            <span>
+                                <strong>
+                                    Email:
+                                </strong>
+                                raquelstefany.work@gmail.com
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <strong>
+                                    Idade:
+                                </strong>
+                                19 anos
+                            </span>
+                            <br>
+                            <span>
+                                <strong>
+                                    Endereço:
+                                </strong>
+                                São Vicente - SP
+                            </span>
+                            <br>
+                            <span>
+                                <strong>
+                                    Nível:
+                                </strong>
+                                Júnior
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" id="btn-dados">
+                        Baixar CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h1>
+                Habilidades
+                <hr>
+            </h1>
+            <div class="skills">
+                <div data-aos="flip-down" data-aos-duration="800">
+                    <i class="uil uil-brackets-curly"></i>
+                    <br>
+                    <strong>
+                        FrontEnd
+                    </strong>
+                    <div class="skill">
+                        <p>
+                            HTML
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <p>
+                            CSS
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <p>
+                            JavaScript
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                </div>
+                <div data-aos="flip-down" data-aos-duration="800">
+                    <i class="uil uil-servers"></i>
+                    <br>
+                    <strong>
+                        BackEnd
+                    </strong>
+                    <div class="skill">
+                        <p>
+                            PHP
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <p>
+                            MySQL
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div data-aos="flip-down" data-aos-duration="800">
+                    <i class="uil uil-cube"></i>
+                    <br>
+                    <strong>
+                        Framework
+                    </strong>
+                    <div class="skill">
+                        <p>
+                            ReactJS
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <p>
+                            BootStrap
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                </div>
+                <div data-aos="flip-down" data-aos-duration="800">
+                    <i class="uil uil-apps"></i>
+                    <br>
+                    <strong>
+                        Extra
+                    </strong>
+                    <div class="skill">
+                        <p>
+                            Informática
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <p>
+                            Office 365
+                        </p>
+                        <progress value="90" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formacao" id="formacao">
+            <h1>
+                Formação Acadêmica
+                <hr>
+            </h1>
+            <div id="area">
+                <div class="areaFormacao" data-aos="zoom-out-up" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Sistemas para Internet
+                        </h3>
+                        <h5>
+                            Cursando
+                        </h5>
+                        <h4>
+                            Tecnólogo, Fatec Baixada Santista Rubens Lara
+                        </h4>
+                        <p>
+                            Desenvolver websites, intranet e sites de comércio eletrônico utilizando programação
+                            específica, além de ferramentas de texto com links. Produzir vídeo, imagem e som,
+                            integrando-os a um website. Atua com novas tecnologias, como dispositivos móveis e redes sem
+                            fio.
+                        </p>
+                    </div>
+                </div>
+                <div class="areaFormacao" data-aos="zoom-out-up" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Desenvolvimento de Sistemas
+                        </h3>
+                        <h5>
+                            Concluído em Junho de 2022
+                        </h5>
+                        <h4>
+                            Técnico, Etec Doutora Ruth Cardoso
+                        </h4>
+                        <p>
+                            Analisar e projetar sistemas, construir, documentar, realizar testes e manter sistemas de
+                            informação. Utiliza ambientes de desenvolvimento e linguagens de programação específica.
+                            Modela, implementa e mantém bancos de dados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formacao" id="cursos">
+            <h1>
+                Cursos
+                <hr>
+            </h1>
+            <div id="area">
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Introdução à Ciência da Computação
+                        </h3>
+                        <h5>
+                            Concluído em Setembro de 2022
+                        </h5>
+                        <h4>
+                            Harvard, Fundação Escolar
+                        </h4>
+                        <p>
+                            Conceitos de algoritmos, estruturas de dados, abstração, encapsulamento, gerenciamento de
+                            recursos, segurança, engenharia de software e desenvolvimento web.
+                        </p>
+                    </div>
+                </div>
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Sistemas Operacionais - Conceitos Básicos
+                        </h3>
+                        <h5>
+                            Concluído em Março de 2021
+                        </h5>
+                        <h4>
+                            Fundação Bradesco
+                        </h4>
+                        <p>
+                            Conhecer o contexto do surgimento e evolução dos sistemas operacionais até como fazer o
+                            gerenciamento de arquivos e o controle de acesso a grupos de usuários.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="area">
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Introdução a Programação Orientada a Objetos
+                        </h3>
+                        <h5>
+                            Concluído em Setembro de 2022
+                        </h5>
+                        <h4>
+                            Fundação Bradesco
+                        </h4>
+                        <p>
+                            Abordar os fundamentos e os quatro pilares da POO (abstração, encapsulamento, herança e
+                            polimorfismo) e exemplos de linguagens orientadas a objeto, como o Java, o C++ e o C#.
+                        </p>
+                    </div>
+                </div>
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Excel Básico
+                        </h3>
+                        <h5>
+                            Concluído em Setembro de 2022
+                        </h5>
+                        <h4>
+                            São Judas Tadeu
+                        </h4>
+                        <p>
+                            Abordar as possibilidades para resolver problemas básicos de cálculos com fórmulas e
+                            aplicação de funções, como também formatação de planilhas e de gráficos e classificação de
+                            dados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="area">
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Programação Básica em Front-End
+                        </h3>
+                        <h5>
+                            Concluído em Outubro de 2022
+                        </h5>
+                        <h4>
+                            Senai
+                        </h4>
+                        <p>
+                            Posicionamento, visibilidade e Flexbox. Sombras, gradientes e transformações.
+                            Pseudoclasses e pseudoelementos. Cores e background. Texto, fontes e web fonts. Estrutura do
+                            DOM. Definição, atributos e estruturas de tags.
+                        </p>
+                    </div>
+                </div>
+                <div class="areaFormacao" data-aos="zoom-in-right" data-aos-duration="800">
+                    <div>
+                        <h3>
+                            Programação Básica em Back-End
+                        </h3>
+                        <h5>
+                            Concluído em Outubro de 2022
+                        </h5>
+                        <h4>
+                            Senai
+                        </h4>
+                        <p>
+                            Introdução à linguagem JavaScript, Tipos de dados, Operadores aritméticos, relacionais e
+                            lógicos, Expressões lógicas e aritméticas, Estruturas de controle e repetição, Funções;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h1>
+                Projetos
+                <hr>
+            </h1>
+            <a href="http://localtech.rf.gd/" class="projeto" target="_blank" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/1.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        LocalTech
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            HTML, CSS, JavaScript, PHP e MySQL
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        O LocalTech tem como função o auxílio a reparos de desktops, além de artigos sobre novas tecnologias, o site também trará dicas sobre o que fazer com equipamentos eletrônicos sem mais utilidades.
+                        <br>
+                        O site conta com um auxilio remoto de chat online, onde usuários do sistema podem entrar em contato com técnicos cadastrados na plataforma, para assim terem um auxilio online para seus desktops.
+                        <br>
+                        Na plataforma também é possível encontrar Assistências Técnicas parceiras do LocalTech, assim tendo acesso a informações de contato e endereço de onde encontra-las para ter um auxilio presencial.
+                    </p>
+                </div>
+            </a>
+            <a class="projeto" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/2.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        LocalTech - Administrador
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            HTML, CSS, JavaScript, PHP e MySQL
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        Sistemas de Administrador do LocalTech, onde é possível fazer a analise de Clientes, Técnicos e Assistências Técnicas.
+                        <br>
+                        Também é possível realizar o controle de artigos e postagem do sistemas, realização do CRUD completo de todos os dados disponíveis no sistema, possuindo assim um sistema totalmente funcional. 
+                    </p>
+                </div>
+            </a>
+            <a href="https://obpc-pq.vercel.app/" class="projeto" target="_blank" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/3.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        O Brasil Para Cristo
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            React, CSS e JavaScript
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        Site de informações sobre Cultos e Eventos da Igreja Pentecostal O Brasil Para Cristo, contando também com informações de conjuntos e lideres da Igreja.
+                    </p>
+                </div>
+            </a>
+            <a href="https://techdelaas.github.io/Tech_Delas/" class="projeto" target="_blank" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/4.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        TechDelas
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            HTML e CSS
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        Site de links referente ao TechDelas, onde é possível encontrar links de portfolios e informações de Redes Sociais.
+                    </p>
+                </div>
+            </a>
+            <a href="https://Rennata-Raniele-1.riddle2003.repl.co" class="projeto" target="_blank" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/5.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        Rennata Raniele
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            HTML e CSS
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        Site de informações sobre venda de cursos e/ou produtos de forma simplificada, através de informações, propagandas e formas de contato para auto divulgação.
+                    </p>
+                </div>
+            </a>
+            <a href="https://raquelstefany.github.io/VolaricFATEC/" class="projeto" target="_blank" data-aos="fade-right" data-aos-duration="800">
+                <div class="image">
+                    <img src="assets/img/projetcs/6.png" alt="Projeto LocalTech">
+                </div>
+                <div class="dados">
+                    <h1>
+                        Volaric
+                    </h1>
+                    <div>
+                        <p>
+                            <span>
+                                Linguagens:
+                            </span>
+                            HTML, CSS e javaScript
+                        </p>
+                        <div class="linguagens">
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"/>
+                            </div>
+                            <div class="linguagem">      
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                            </div>
+                        </div>
+                    </div>
+                    <span>
+                        Descrição:
+                    </span>
+                    <p>
+                        O Volaric museu do Brasil veio para misturar arte, cultura e tecnologia.
+                        <br>
+                        Em busca de museus que forneçam esses três pilares e contemplasse o nosso País, desenvolvemos o Volaric. Destina-se a quem pretende conhecer melhor o que torna cada obra única, adquirindo obras digitais e/ou colaborando com a divulgação da arte, bem como conhecer melhor a história de cada obra existente.
+                        <br>
+                        A Volaric também está apostando nos NFTs (que é a abreviação de "Non-Fungible Token", que em português significa "Token Não-Fungível". Um token criptográfico que representa algo único), porque acreditamos que a arte nos NFTs é o futuro.
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <section id="contato">
+            <h1>
+                Contato
+                <hr>
+            </h1>
+            <div>
+                <div>
+                    <a href="" target="_blank" class="contact" data-aos="fade-up" data-aos-duration="800">
+                        <p>
+                            <i class="uil uil-map-marker"></i>
+                        </p>
+                        <p>
+                            <strong>
+                                Endereço
+                            </strong>
+                            <br>
+                            São Vicente - SP
+                        </p>
+                    </a>
+                    <a href="" target="_blank" class="contact" data-aos="fade-up" data-aos-duration="800">
+                        <p>
+                            <i class="uil uil-phone"></i>
+                        </p>
+                        <p>
+                            <strong>
+                                Telefone
+                            </strong>
+                            <br>
+                            (13) 98802-4735
+                        </p>
+                    </a>
+                </div>
+                <div>
+                    <a href="" target="_blank" class="contact" data-aos="fade-up" data-aos-duration="800">
+                        <p>
+                            <i class="uil uil-at"></i>
+                        </p>
+                        <p>
+                            <strong>
+                                Email
+                            </strong>
+                            <br>
+                            raquelstefany.work@gmail.com
+                        </p>
+                    </a>
+                    <a href="" target="_blank" class="contact" data-aos="fade-up" data-aos-duration="800">
+                        <p>
+                            <i class="uil uil-instagram"></i>
+                        </p>
+                        <p>
+                            <strong>
+                                Instagram
+                            </strong>
+                            <br>
+                            @raquelrodriguez013
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <a href="" target="_blank" data-aos="fade-up" data-aos-duration="800">
+                <i class="uil uil-whatsapp"></i>
+                Entre em Contato
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <h2>
+                    Siga-me nas
+                    <br>
+                    <h3>
+                        Redes Sociais
+                    </h3>
+                </h2>
+                <div>
+                    <a href="https://github.com/RaquelStefany" target="_blank" class="uil uil-github"></a>
+                    <a href="https://www.linkedin.com/in/raquel-stefany-generoso-rodrigues-a51a7a201/" target="_blank" class="uil uil-linkedin"></a>
+                    <a href="https://www.instagram.com/raquelrodriguez013/" target="_blank" class="uil uil-instagram"></a>
+                </div>
+            </div>
+            <div id="menu">
+                <div>
+                    <a href="#inicio">
+                        Inicio
+                    </a>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
+                    <a href="#habilidades">
+                        Habilidades
+                    </a>
+                </div>
+                <div>
+                    <a href="#formacao">
+                        Formação
+                    </a>
+                    <a href="#projetos">
+                        Projetos
+                    </a>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
+        <hr>
+    </footer>
+
     <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        /* document.addEventListener('contextmenu', event => event.preventDefault()); */
+    </script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
+
 </html>
