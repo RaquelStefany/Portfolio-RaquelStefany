@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 const ul = document.querySelector('nav ul');
 const menuBtn = document.querySelector('.menu-btn i');
 

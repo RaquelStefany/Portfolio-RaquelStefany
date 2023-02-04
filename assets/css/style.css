@@ -35,7 +35,7 @@ nav {
     display: flex;
     height: 80px;
     width: 100%;
-    background-color: #e9b6dd;
+    background-color: black;
     background-image: url(../img/background/Fundo_Desktop3.png);
     background-size: cover;
     background-position: top;
@@ -1010,6 +1010,7 @@ main #projetos .projeto .linguagens .linguagem img {
 
     main #projetos .projeto .linguagens {
         width: 60%;
+        justify-content: normal
     }
 }
 
