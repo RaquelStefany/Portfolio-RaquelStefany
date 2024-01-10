@@ -98,7 +98,7 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title">Estagiário de TI</h3>
                 <span className="qualification__subtitle">
-                  Estágio, Grupo Gelog
+                  Analista de Desenvolvimento de Sistemas, Grupo Gelog
                 </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
@@ -123,7 +123,7 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title">Full Stack Developer</h3>
                 <span className="qualification__subtitle">
-                  Estágio, Fatec Baixada Santista Rubens Lara
+                  Analista de Sistemas, Fatec Baixada Santista Rubens Lara
                 </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
