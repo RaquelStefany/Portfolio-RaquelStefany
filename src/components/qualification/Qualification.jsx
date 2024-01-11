@@ -48,13 +48,13 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Sistemas para Internet</h3>
+                <h3 className="qualification__title">Análise e Desenvolvimento de Sistemas</h3>
                 <span className="qualification__subtitle">
-                  Curso Superior, Fatec Baixada Santista Rubens Lara
+                  Curso Superior, Descomplica Faculdade
                 </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  Jul 2022 - Presente
+                  Jan 2024 - Presente
                 </div>
               </div>
 
@@ -73,6 +73,19 @@ const Qualification = () => {
               </div>
 
               <div>
+                <h3 className="qualification__title">Sistemas para Internet</h3>
+                <span className="qualification__subtitle">
+                  Curso Superior, Fatec Baixada Santista Rubens Lara
+                </span>
+                <div className="qualification__calendar">
+                  <i className="uil uil-calendar-alt"></i>
+                  Jan 2022 - Pausado
+                </div>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div>
                 <h3 className="qualification__title">
                   Desenvolvimento de Sistemas
                 </h3>
@@ -83,6 +96,11 @@ const Qualification = () => {
                   <i className="uil uil-calendar-alt"></i>
                   Fev 2021 - Jul 2022
                 </div>
+              </div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
               </div>
             </div>
           </div>
@@ -96,13 +114,15 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Estagiário de TI</h3>
+                <h3 className="qualification__title">
+                  Analista de Desenvolvimento de Sistemas
+                </h3>
                 <span className="qualification__subtitle">
-                  Analista de Desenvolvimento de Sistemas, Grupo Gelog
+                  Integral, Grupo Gelog
                 </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
-                  Jul 2023 - Presente
+                  Jan 2024 - Presente
                 </div>
               </div>
 
@@ -123,12 +143,30 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title">Full Stack Developer</h3>
                 <span className="qualification__subtitle">
-                  Analista de Sistemas, Fatec Baixada Santista Rubens Lara
+                  Integral, Fatec Baixada Santista Rubens Lara
                 </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-calendar-alt"></i>
                   Abr 2023 - Presente
                 </div>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">Estagiário de TI</h3>
+                <span className="qualification__subtitle">
+                  Estágio, Grupo Gelog
+                </span>
+                <div className="qualification__calendar">
+                  <i className="uil uil-calendar-alt"></i>
+                  Jul 2023 - Dez 2023
+                </div>
+              </div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ const Data = () => {
                 Full Stack Developer
             </h3>
             <p className="home__description">
-                HTML | CSS | JavaScript | PHP | MySQL
+                PHP | JavaScript | SQL | Python | HTML | CSS
             </p>
             <a href="#contato" className="button button--flex">
                 Contate-me 
