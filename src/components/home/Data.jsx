@@ -56,7 +56,7 @@ const Data = () => {
                 </svg>
             </h1>
             <h3 className="home__subtitle">
-                Full Stack Developer
+                Analista de Sistemas
             </h3>
             <p className="home__description">
                 PHP | JavaScript | SQL | Python | HTML | CSS
