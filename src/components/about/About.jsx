@@ -15,7 +15,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Desenvolvedora Full Stack com formação em Técnica em Desenvolvimento de Sistemas e cursando atualmente Tecnólogo em Sistemas para Internet, comprometida em entregar trabalhos de alta qualidade e aberta a feedbacks construtivos para aprimorar suas habilidades.
+            Analista de Sistemas com formação em Técnica em Desenvolvimento de Sistemas e cursando atualmente Tecnólogo em Análise e Desenvolvimento de Sistemas, comprometida em entregar trabalhos de alta qualidade e aberta a feedbacks construtivos para aprimorar minhas habilidades.
           </p>
 
           <a href={CV} download="" className="button button--flex">
