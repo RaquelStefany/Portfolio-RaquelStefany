@@ -115,7 +115,7 @@ const Qualification = () => {
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">
-                  Analista de Desenvolvimento de Sistemas
+                  Assistente de Sistemas
                 </h3>
                 <span className="qualification__subtitle">
                   Integral, Grupo Gelog
