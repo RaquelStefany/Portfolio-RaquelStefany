@@ -1,16 +1,782 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Raquel Stefany - Full Stack Developer - Portfólio">
-    <link rel="icon" type="image/svg+xml" href="/src/assets/icon/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Raquel Stefany - Full Stack Developer</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Raquel Rodrigues - Analista de Sistemas
+  </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">
+      Raquel Rodrigues
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">
+            Sobre
+          </a></li>
+        <li><a href="#experience">
+            Competências
+          </a></li>
+        <li><a href="#projects">
+            Certificações
+          </a></li>
+        <li><a href="#contact">
+            Contato
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">
+      Raquel Rodrigues
+    </div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">
+            Sobre
+          </a></li>
+        <li><a href="#experience" onclick="toggleMenu()">
+            Competências
+          </a></li>
+        <li><a href="#projects" onclick="toggleMenu()">
+            Certificações
+          </a></li>
+        <li><a href="#contact" onclick="toggleMenu()">
+            Contato
+          </a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="
+      Raquel Rodrigues profile picture" / style="border-radius: 50%;">
+    </div>
+    <div class="section__text" style="display: grid; row-gap: 1rem;">
+      <p class="section__text__p1">
+        PHP | JavaScript | SQL | Python | HTML | CSS | Flask | Tailwind CSS
+      </p>
+      <h1 class="title">
+        Raquel Rodrigues
+      </h1>
+      <p class="section__text__p2">
+        Analista de Sistemas
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/curriculo/Currículo Raquel Rodrigues.pdf')">
+          Baixar CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contato
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/raquelstefany/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/RaquelStefany'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">
+      Conheça
+    </p>
+    <h1 class="title">
+      Sobre Mim
+    </h1>
+    <br>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="text-container">
+          <p>
+            Analista de Sistemas com formação em Técnica em Desenvolvimento de Sistemas e cursando atualmente Tecnólogo
+            em Análise e Desenvolvimento de Sistemas, comprometida em entregar trabalhos de alta qualidade e aberta a
+            feedbacks construtivos para aprimorar minhas habilidades.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about-containers">
+      <div class="details-container">
+        <img src="./assets/experience.png" alt="
+        Experiência icon" class="icon" />
+        <h3>
+          Experiência
+        </h3>
+        <br>
+        <div style="text-align: left;">
+          <div>
+            <h4>
+              Analista de Sistemas Jr
+            </h4>
+            <p>
+              Grupo Gelog
+            </p>
+            <span style="color: grey;">
+              Julho 2023 - Atualmente
+            </span>
+            <br><br>
+          </div>
+          <div>
+            <h4>
+              Desenvolvedora Web
+            </h4>
+            <p>
+              FenTI Services & Consulting
+            </p>
+            <span style="color: grey;">
+              Março 2024 - Atualmente
+            </span>
+            <br><br>
+          </div>
+          <div>
+            <h4>
+              Desenvolvedora FullStack
+            </h4>
+            <p>
+              Fatec Baixada Santista Rubens Lara
+            </p>
+            <span style="color: grey;">
+              Abril 2023 - Atualmente
+            </span>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="details-container">
+        <img src="./assets/education.png" alt="Education icon" class="icon" />
+        <h3>
+          Educação
+        </h3>
+        <br>
+        <div style="text-align: left;">
+          <div>
+            <h4>
+              Análise e Desenvolvimento de Sistemas
+            </h4>
+            <p>
+              Universidade Católica de Santos - Tecnólogo
+            </p>
+            <span style="color: grey;">
+              Junho 2024 - Atualmente
+            </span>
+            <br><br>
+          </div>
+          <div>
+            <h4>
+              Sistemas Para Internet
+            </h4>
+            <p>
+              Fatec Baixada Santista Rubens Lara - Tecnólogo
+            </p>
+            <span style="color: grey;">
+              Julho 2022 - Pausado
+            </span>
+            <br><br>
+          </div>
+          <div>
+            <h4>
+              Desenvolvimento de Sistemas
+            </h4>
+            <p>
+              Etec Doutura Ruth Cardoso - Técnico
+            </p>
+            <span style="color: grey;">
+              Janeiro 2021 - Junho 2022
+            </span>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">
+      Explore Minhas
+    </p>
+    <h1 class="title">
+      Competências
+    </h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Programação
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  PHP
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Python
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  JavaScript
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  HTML
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  CSS
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <br>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Banco de Dados
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  SQL Server
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  MySQL
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Frameworks
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Flask
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  CodeIgniter
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  TailwindCSS
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  BootStrap
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Bibliotecas
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  jQuery
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Pandas
+                </h3>
+                <p>
+                  Intermediário
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  AgGrid
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  AgCharts
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Versionamento
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Git
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  GitHub
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Azure DevOps
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <br>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">
+            Softwares
+          </h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Rodopar
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Microled
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Crystal Reports
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="
+              Competências icon" class="icon" />
+              <div>
+                <h3>
+                  Power Automate
+                </h3>
+                <p>
+                  Básico
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">
+      Minhas
+    </p>
+    <h1 class="title">
+      Certificações
+    </h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Raquel Rodrigues - Formação Engenharia de software - Alura_page-0001.jpg"
+              alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Engenharia de Software
+            <span>
+              Alura
+            </span>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Raquel Rodrigues - Formação Engenharia de software - Alura_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/SQL (Advanced)_page-0001.jpg" alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            SQL Avançado
+            <span>
+              HackerHank
+            </span>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="./assets/certificados/SQL (Advanced)_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Versionamento de Código com Gite GitHub_I6MAV3RC_page-0001.jpg"
+              alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Versionamento Git e GitHub
+              <span>
+                Dio.me
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Versionamento de Código com Gite GitHub_I6MAV3RC_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/certificados/Raquel Stefany Generoso Rodrigues - Formação Especialização Front-End - Alura_page-0001.jpg"
+              alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Especialização Front-End
+              <span>
+                Alura
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Raquel Stefany Generoso Rodrigues - Formação Especialização Front-End - Alura_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Crystal Reports.png" alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Crystal Reports
+              <span>
+                Datapar
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="./assets/certificados/Crystal Reports.png"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Big Data & Analytics.png" alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Big Data & Analytics
+              <span>
+                FIAP
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn" href="./assets/certificados/Big Data & Analytics.png"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/certificados/Certificado de CC50 - O Curso de Ciência da Computação de Harvard_page-0001.jpg"
+              alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              CC50 Ciência da Computação
+              <span>
+                Harvard - Fundação Escolar
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Certificado de CC50 - O Curso de Ciência da Computação de Harvard_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Certificado Conclusão Sistemas Operacionais Conceitos Basicos.jpg"
+              alt="Certification" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Sistemas Operacionais
+              <span>
+                Fundação Bradesco
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Certificado Conclusão Sistemas Operacionais Conceitos Basicos.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/certificados/Certificado Excel Módulo Básico_page-0001.jpg" alt="Certification"
+              class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            <h2 class="experience-sub-title project-title">
+              Excel Básico
+              <span>
+                São Judas Tadeu
+              </span>
+            </h2>
+          </h2>
+          <div class="btn-container">
+            <a class="btn btn-color-2 project-btn"
+              href="./assets/certificados/Certificado Excel Módulo Básico_page-0001.jpg"
+              style="text-decoration: none; font-size: small">
+              Certificado
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">
+      Formas de
+    </p>
+    <h1 class="title">
+      Contato
+    </h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:raquelstefany.work@gmail.com">raquelstefany.work@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/raquelstefany/">LinkedIn Raquel Rodrigues</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">
+              Sobre
+            </a></li>
+          <li><a href="#experience">
+              Competências
+            </a></li>
+          <li><a href="#projects">
+              Certificações
+            </a></li>
+          <li><a href="#contact">
+              Contato
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; <span id="anoAtual"></span>
+      Raquel Rodrigues. Todos os Direitos Reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    const anoAtual = new Date().getFullYear();
+    document.getElementById('anoAtual').textContent = anoAtual;
+  </script>
+</body>
+
 </html>
