@@ -4,13 +4,6 @@ Criei este portfólio com o objetivo de apresentar de forma mais abrangente as m
 
 <hr>
 
-### ⚡ Tecnologias
-- React
-- CSS
-- EmailJS
-
-<hr>
-
 ### ⭐ Redes Sociais
 
 <div>
