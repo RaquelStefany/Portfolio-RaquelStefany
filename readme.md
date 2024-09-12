@@ -2,6 +2,8 @@
 
 Criei este portfólio com o objetivo de apresentar de forma mais abrangente as minhas habilidades. Nele, você poderá encontrar exemplos concretos do que aprendi até agora e das minhas experiências.
 
+<img src="./assets/preview/portfolio-raquel-stefany.vercel.app.png" width='100%'>
+
 <hr>
 
 ### ⭐ Redes Sociais
