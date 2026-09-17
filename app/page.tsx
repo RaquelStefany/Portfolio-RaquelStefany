@@ -621,7 +621,7 @@ export default function Home() {
 					: "Founder of the Kliqo.Tech venture and upcoming software house (kliqo.tech). Leading software architecture focusing on web development (SeaTracking), high-converting landing pages (Clínica Rebeca Duarte, Dr. César Vinícius), and the proprietary Kliqo Insights platform for paid traffic analytics and ad metrics.",
 		},
 		{
-			role: lang === "pt" ? "Analista de Sistemas Jr" : "Junior Systems Analyst",
+			role: lang === "pt" ? "Analista de Sistemas Pleno" : "Mid-Level Systems Analyst",
 			company: "Grupo Gelog",
 			period: lang === "pt" ? "Julho 2023 - Atualmente" : "July 2023 - Present",
 			current: true,
