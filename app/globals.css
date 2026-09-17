@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+@theme {
+  --color-surface: #0f131d;
+  --color-surface-dim: #0f131d;
+  --color-background: #0f131d;
+  --color-surface-container-lowest: #0a0e18;
+  --color-surface-container-low: #171b26;
+  --color-surface-container: #1c1f2a;
+  --color-surface-container-high: #262a35;
+  --color-surface-container-highest: #313540;
+  --color-surface-bright: #353944;
+  --color-surface-variant: #313540;
+  --color-on-surface: #dfe2f1;
+  --color-on-surface-variant: #bbcabf;
+  --color-outline: #86948a;
+  --color-outline-variant: #3c4a42;
+
+  --color-primary: #4edea3;
+  --color-primary-container: #10b981;
+  --color-primary-fixed: #6ffbbe;
+  --color-primary-fixed-dim: #4edea3;
+  --color-on-primary: #003824;
+  --color-on-primary-container: #00422b;
+
+  --color-secondary: #4cd7f6;
+  --color-secondary-container: #03b5d3;
+  --color-on-secondary: #003640;
+  --color-on-secondary-container: #00424e;
+
+  --color-tertiary: #adc6ff;
+  --color-tertiary-container: #71a1ff;
+  --color-on-tertiary: #002e6a;
+
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
 :root {
   color-scheme: dark;
 }
@@ -15,11 +51,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgba(16, 185, 129, 0.14), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.12), transparent 22%),
-    #020617;
-  color: #e2e8f0;
+  background-color: #0f131d;
+  color: #dfe2f1;
 }
 
 a {
@@ -30,3 +63,4 @@ a {
 button {
   font: inherit;
 }
+
