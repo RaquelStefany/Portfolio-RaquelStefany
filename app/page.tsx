@@ -215,7 +215,7 @@ export default function Home() {
 				location: "São Vicente - SP, Brazil",
 				techBadge: "Desenvolvido com Next.js & Tailwind CSS",
 				status: "Online",
-				copyright: "© 2025 Raquel Rodrigues. Todos os direitos reservados.",
+				copyright: `© ${currentYear} Raquel Rodrigues. Todos os direitos reservados.`,
 			},
 		},
 		en: {
@@ -349,7 +349,7 @@ export default function Home() {
 				location: "São Vicente - SP, Brazil",
 				techBadge: "Built with Next.js & Tailwind CSS",
 				status: "Online",
-				copyright: "© 2025 Raquel Rodrigues. All rights reserved.",
+				copyright: `© ${currentYear} Raquel Rodrigues. All rights reserved.`,
 			},
 		},
 	};
