@@ -52,10 +52,15 @@ export default function Home() {
 	const [lang, setLang] = useState<Locale>("pt");
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+	const [zoomedImage, setZoomedImage] = useState<{
+		src: string;
+		alt: string;
+		title: string;
+	} | null>(null);
 	const [copied, setCopied] = useState(false);
 
 	useEffect(() => {
-		if (selectedProject) {
+		if (selectedProject || zoomedImage) {
 			document.body.style.overflow = "hidden";
 		} else {
 			document.body.style.overflow = "unset";
@@ -64,7 +69,18 @@ export default function Home() {
 		return () => {
 			document.body.style.overflow = "unset";
 		};
-	}, [selectedProject]);
+	}, [selectedProject, zoomedImage]);
+
+	useEffect(() => {
+		const handleKeyDown = (event: KeyboardEvent) => {
+			if (event.key === "Escape") {
+				setZoomedImage(null);
+			}
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+		return () => document.removeEventListener("keydown", handleKeyDown);
+	}, []);
 
 	const handleCopyEmail = () => {
 		const email = "raquelstefany.work@gmail.com";
@@ -179,7 +195,7 @@ export default function Home() {
 				subtitle:
 					"Fundadora do projeto e futura softhouse Kliqo.Tech, com atuação focada em desenvolvimento web, landing pages de alta conversão e na plataforma proprietária Kliqo Insights.",
 				websiteBtn: "Acessar kliqo.tech",
-				proprietaryTag: "Plataforma Proprietária",
+				proprietaryTag: "Acessar Projeto",
 				liveTag: "Online",
 				accessProject: "Acessar Projeto",
 			},
@@ -313,7 +329,7 @@ export default function Home() {
 				subtitle:
 					"Founder of the Kliqo.Tech venture and upcoming software house, focusing on web development, high-converting landing pages, and the proprietary Kliqo Insights platform.",
 				websiteBtn: "Visit kliqo.tech",
-				proprietaryTag: "Proprietary Platform",
+				proprietaryTag: "Visit Project",
 				liveTag: "Live",
 				accessProject: "Visit Project",
 			},
@@ -481,6 +497,90 @@ export default function Home() {
 				{ src: "/projects/mercedesgelog/processos.png", alt: "SLA Tracking Workflow" },
 			],
 		},
+		{
+			id: 4,
+			title: "TI System",
+			tag: lang === "pt" ? "Gestão de TI & Automação" : "IT Management & Automation",
+			badgeLabel: lang === "pt" ? "GESTÃO DE TI" : "IT MANAGEMENT",
+			badgeColor: "primary",
+			description:
+				lang === "pt"
+					? "Sistema de gestão focado no departamento de TI, com automações de chamados, integração fiscal e controle de dispositivos eletrônicos."
+					: "IT management system focused on internal support operations, recurring ticket automation, tax integration, and electronics lifecycle tracking.",
+			fullDescription:
+				lang === "pt"
+					? "Plataforma desenvolvida para centralizar a operação do departamento de TI com foco em eficiência, rastreabilidade e automação. O sistema organiza chamados frequentes, integra XML de notas fiscais do TMS interno, gerencia dispositivos eletrônicos, emite termos de uso e disponibiliza um gerador de assinatura para padronizar a comunicação interna."
+					: "Purpose-built platform to centralize IT department operations with a strong emphasis on efficiency, traceability, and automation. The system handles recurring support tickets, integrates XML invoices from the internal TMS, manages electronic devices, issues device use terms, and provides a signature generator to standardize internal communications.",
+			highlights:
+				lang === "pt"
+					? [
+							"Automação de chamados recorrentes e fluxos de suporte",
+							"Integração de XML de notas fiscais do TMS interno",
+							"Gestão de dispositivos, termos de uso e assinatura corporativa",
+						]
+					: [
+							"Automation of recurring tickets and support workflows",
+							"XML invoice integration from the internal TMS",
+							"Device tracking, use-term issuance, and corporate signature generation",
+						],
+			technologies: [
+				"Python",
+				"Flask",
+				"SQL Server",
+				"JavaScript",
+				"XML",
+				"Automação",
+				"UI/UX",
+			],
+			bannerImage: "/projects/tisystem/dashboard.png",
+			images: [
+				{ src: "/projects/tisystem/login.png", alt: "Login Screen" },
+				{ src: "/projects/tisystem/dashboard.png", alt: "IT Management Dashboard" },
+				{ src: "/projects/tisystem/dispositivos.png", alt: "Device Management" },
+				{ src: "/projects/tisystem/gerador_assinatura.png", alt: "Signature Generator" },
+			],
+		},
+		{
+			id: 5,
+			title: "Jornada System",
+			tag: lang === "pt" ? "Pagamentos & Integrações" : "Payments & Integrations",
+			badgeLabel: lang === "pt" ? "INTEGRAÇÃO FINANCEIRA" : "FINANCIAL INTEGRATION",
+			badgeColor: "secondary",
+			description:
+				lang === "pt"
+					? "Sistema desenvolvido para integrar os pagamentos de motoristas do TMS principal da empresa ao banco online PamCard por meio de API."
+					: "System developed to integrate driver payments from the company's main TMS with the PamCard online bank through an API.",
+			fullDescription:
+				lang === "pt"
+					? "O Jornada System centraliza o processo de pagamentos de motoristas, conectando os dados do TMS principal da empresa ao banco online PamCard via API. A plataforma apoia o envio e o acompanhamento das transações, além de disponibilizar a extração de relatórios para conferência, controle financeiro e análise operacional."
+					: "Jornada System centralizes the driver payment process by connecting data from the company's main TMS to the PamCard online bank through an API. The platform supports transaction submission and monitoring while providing report extraction for reconciliation, financial control, and operational analysis.",
+			highlights:
+				lang === "pt"
+					? [
+							"Integração via API entre o TMS principal e o PamCard",
+							"Automação do fluxo de pagamentos de motoristas",
+							"Extração de relatórios para conferência e controle financeiro",
+						]
+					: [
+							"API integration between the main TMS and PamCard",
+							"Automated driver payment workflow",
+							"Report extraction for reconciliation and financial control",
+						],
+			technologies: [
+				"APIs REST",
+				"PamCard",
+				"TMS",
+				"SQL Server",
+				"Integração de Dados",
+				"Relatórios",
+			],
+			bannerImage: "/projects/jornadasystem/inicio.png",
+			images: [
+				{ src: "/projects/jornadasystem/login.png", alt: "Login Screen" },
+				{ src: "/projects/jornadasystem/inicio.png", alt: "Jornada System Home" },
+				{ src: "/projects/jornadasystem/relatorio.png", alt: "Payment Reports" },
+			],
+		},
 	];
 
 	const kliqoVentures = [
@@ -488,7 +588,7 @@ export default function Home() {
 			id: "insights",
 			title: "Kliqo Insights",
 			tag: lang === "pt" ? "Relatórios & Mídia Paga" : "Analytics & Paid Media",
-			badgeLabel: lang === "pt" ? "PLATAFORMA PROPRIETÁRIA" : "PROPRIETARY PLATFORM",
+			badgeLabel: lang === "pt" ? "PLATAFORMA DE GESTÃO" : "MANAGEMENT PLATFORM",
 			badgeColor: "text-[#4edea3] border-[#4edea3]/30",
 			cardBorder: "border-[#4edea3]/30 hover:border-[#4edea3]/60",
 			description:
@@ -508,8 +608,8 @@ export default function Home() {
 							"Automated generation of executive reports",
 						],
 			technologies: ["Next.js", "TypeScript", "Meta Ads", "Google Ads", "Analytics"],
-			link: "https://kliqo.tech/",
-			linkLabel: "kliqo.tech",
+			link: "https://insights.kliqo.tech/",
+			linkLabel: "insights.kliqo.tech",
 			isProprietary: true,
 			icon: BarChart3,
 			accentColor: "text-[#4edea3]",
@@ -611,7 +711,7 @@ export default function Home() {
 			role: lang === "pt" ? "Fundadora & Desenvolvedora Líder" : "Founder & Lead Developer",
 			company: "Kliqo.Tech",
 			link: "https://kliqo.tech/",
-			period: lang === "pt" ? "2024 - Atualmente" : "2024 - Present",
+			period: lang === "pt" ? "2026 - Atualmente" : "2026 - Present",
 			current: true,
 			dotColor: "bg-[#4edea3]",
 			tagColor: "text-[#4edea3] bg-[#262a35] border border-[#4edea3]/30",
@@ -635,7 +735,7 @@ export default function Home() {
 		{
 			role: lang === "pt" ? "Web Developer - Freelancer" : "Web Developer - Freelancer",
 			company: "FenTI Services & Consulting",
-			period: lang === "pt" ? "Março 2024 - Atualmente" : "March 2024 - Present",
+			period: lang === "pt" ? "Março 2024 - Fevereiro 2026" : "March 2024 - February 2026",
 			current: false,
 			dotColor: "bg-[#4cd7f6]",
 			tagColor: "text-[#4cd7f6] bg-[#262a35] border border-[#4cd7f6]/30",
@@ -667,7 +767,7 @@ export default function Home() {
 			institution: "Universidade Católica de Santos",
 			period: "2024 - 2026",
 			tagColor: "text-[#4edea3] bg-[#262a35]",
-			status: lang === "pt" ? "Em andamento" : "In Progress",
+			status: lang === "pt" ? "Concluído" : "Completed",
 		},
 		{
 			title: lang === "pt" ? "Sistemas para Internet" : "Internet Systems",
@@ -1491,7 +1591,29 @@ export default function Home() {
 											className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden group hover:border-[#3c4a42] hover:shadow-2xl transition-all duration-300"
 										>
 											{/* Image Banner */}
-											<div className="h-44 bg-[#0a0e18] relative overflow-hidden flex items-center justify-center p-4">
+											<div
+												className="h-44 bg-[#0a0e18] relative overflow-hidden flex items-center justify-center p-4 cursor-zoom-in"
+												role="button"
+												tabIndex={0}
+												aria-label={`${lang === "pt" ? "Ampliar imagem de" : "Zoom image for"} ${project.title}`}
+												onClick={() =>
+													setZoomedImage({
+														src: project.bannerImage,
+														alt: project.title,
+														title: project.title,
+													})
+												}
+												onKeyDown={(event) => {
+													if (event.key === "Enter" || event.key === " ") {
+														event.preventDefault();
+														setZoomedImage({
+															src: project.bannerImage,
+															alt: project.title,
+															title: project.title,
+														});
+													}
+												}}
+											>
 												<div className="absolute inset-0 bg-gradient-to-t from-[#1c1f2a] via-[#1c1f2a]/40 to-transparent z-10" />
 												<Image
 													src={project.bannerImage}
@@ -1500,6 +1622,9 @@ export default function Home() {
 													sizes="(max-width: 768px) 100vw, 33vw"
 													className="object-cover opacity-65 group-hover:scale-105 transition-transform duration-500"
 												/>
+												<div className="absolute inset-0 z-20 flex items-center justify-center bg-[#0a0e18]/0 group-hover:bg-[#0a0e18]/35 transition-colors pointer-events-none">
+													<Eye className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+												</div>
 												<div className="absolute top-3 left-3 z-20">
 													<span
 														className={`px-2.5 py-1 rounded-md bg-[#262a35]/90 backdrop-blur font-mono text-[11px] font-bold uppercase tracking-wider border ${badgeColorClasses}`}
@@ -1938,9 +2063,17 @@ export default function Home() {
 								{/* Left: Screenshots Gallery */}
 								<div className="space-y-4">
 									{selectedProject.images.map((img, idx) => (
-										<div
+										<button
 											key={idx}
-											className="group relative rounded-xl overflow-hidden bg-[#0a0e18] border border-[#262a35] aspect-video"
+											type="button"
+											className="group relative rounded-xl overflow-hidden bg-[#0a0e18] border border-[#262a35] aspect-video cursor-zoom-in text-left w-full"
+											onClick={() =>
+												setZoomedImage({
+													src: img.src,
+													alt: img.alt,
+													title: selectedProject.title,
+												})
+											}
 										>
 											<div className="absolute top-2 left-2 z-10 bg-[#0f131d]/90 px-2 py-1 rounded text-[10px] font-mono text-[#4edea3] border border-[#4edea3]/20">
 												{img.alt}
@@ -1952,7 +2085,10 @@ export default function Home() {
 												sizes="(max-width: 1024px) 100vw, 50vw"
 												className="object-cover group-hover:scale-105 transition-transform duration-300"
 											/>
-										</div>
+											<div className="absolute inset-0 flex items-center justify-center bg-[#0a0e18]/0 group-hover:bg-[#0a0e18]/35 transition-colors pointer-events-none">
+												<Eye className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+											</div>
+										</button>
 									))}
 
 									<div className="p-3.5 bg-[#4edea3]/5 border border-[#4edea3]/20 rounded-xl text-xs text-[#4edea3]/90 flex items-center gap-3">
@@ -2019,6 +2155,44 @@ export default function Home() {
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			)}
+
+			{zoomedImage && (
+				<div
+					className="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-8 bg-[#0a0e18]/90 backdrop-blur-md"
+					role="dialog"
+					aria-modal="true"
+					aria-label={zoomedImage.title}
+					onClick={() => setZoomedImage(null)}
+				>
+					<div
+						className="relative w-full max-w-6xl max-h-[90vh] flex flex-col items-center gap-3"
+						onClick={(event) => event.stopPropagation()}
+					>
+						<div className="w-full flex items-center justify-between gap-4">
+							<h2 className="text-sm sm:text-base font-bold text-[#dfe2f1] truncate">
+								{zoomedImage.title}
+							</h2>
+							<button
+								type="button"
+								onClick={() => setZoomedImage(null)}
+								className="shrink-0 p-2 rounded-full bg-[#1c1f2a] border border-[#3c4a42]/60 text-[#bbcabf] hover:text-[#dfe2f1] hover:bg-[#262a35] transition-colors cursor-pointer"
+								aria-label={t.modal.close}
+							>
+								<X className="w-6 h-6" />
+							</button>
+						</div>
+						<div className="relative w-full h-[calc(90vh-5rem)] rounded-xl overflow-hidden bg-[#0a0e18] border border-[#3c4a42]/60 shadow-2xl">
+							<Image
+								src={zoomedImage.src}
+								alt={zoomedImage.alt}
+								fill
+								sizes="(max-width: 768px) 100vw, 1200px"
+								className="object-contain"
+							/>
 						</div>
 					</div>
 				</div>
