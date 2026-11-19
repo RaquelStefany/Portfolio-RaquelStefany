@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ParticleField from "./components/ParticleField";
+import SiteEffects from "./components/SiteEffects";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
 	subsets: ["latin"],
@@ -27,8 +29,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt-BR" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} dark scroll-smooth`}>
-			<body className="bg-[#0f131d] text-[#dfe2f1] font-sans antialiased selection:bg-[#10b981] selection:text-[#00422b]">
+			<body className="text-[#dfe2f1] font-sans antialiased selection:bg-[#10b981] selection:text-[#00422b]">
+				{/* Fundo no estilo Kliqo: grade de pontos + partículas fixas atrás do conteúdo */}
+				<div className="page-grid" aria-hidden="true" />
+				<ParticleField />
 				{children}
+				<SiteEffects />
 			</body>
 		</html>
 	);

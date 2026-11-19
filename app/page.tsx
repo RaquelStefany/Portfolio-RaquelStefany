@@ -48,6 +48,8 @@ type Project = {
 	images: { src: string; alt: string }[];
 };
 
+const TECH_MARQUEE = ["PHP", "Python", "JavaScript", "SQL Server", "MySQL", "Laravel", "CodeIgniter", "Flask", "TailwindCSS", "Bootstrap", "Power BI", "Crystal Reports", "Git & GitHub", "Prompt Engineering", "Tráfego Pago"];
+
 export default function Home() {
 	const [lang, setLang] = useState<Locale>("pt");
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -804,9 +806,9 @@ export default function Home() {
 	];
 
 	return (
-		<div className="min-h-screen bg-[#0f131d] text-[#dfe2f1] font-sans antialiased selection:bg-[#10b981] selection:text-[#00422b]">
+		<div className="min-h-screen text-[#dfe2f1] font-sans antialiased selection:bg-[#10b981] selection:text-[#00422b]">
 			{/* FIXED HEADER */}
-			<header className="fixed top-0 left-0 right-0 z-50 bg-[#0f131d]/85 backdrop-blur-xl border-b border-[#262a35]/70 shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
+			<header data-header className="fixed top-0 left-0 right-0 z-50 bg-[#0f131d]/70 backdrop-blur-xl border-b border-[#262a35]/70 shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
 				<div className="max-w-[1180px] mx-auto px-4 md:px-6 h-20 flex items-center justify-between gap-4">
 					{/* Brand Logo */}
 					<a
@@ -937,23 +939,23 @@ export default function Home() {
 						</div>
 					</div>
 				)}
+				<span className="scroll-progress" aria-hidden="true" />
 			</header>
 
 			{/* MAIN WRAPPER */}
-			<main className="w-full pt-20 bg-[#0f131d] min-h-screen">
+			<main className="w-full pt-20 min-h-screen">
 				{/* AMBIENT RADIAL TOP GLOW */}
-				<div className="relative w-full overflow-hidden">
-					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[840px] h-[360px] bg-gradient-to-b from-[#4edea3]/10 via-[#4cd7f6]/5 to-transparent blur-[130px] pointer-events-none -z-10" />
-
+				<div className="relative w-full overflow-x-clip">
+					
 					<div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24 py-8 md:py-14">
 						{/* ============================================================ */}
 						{/* 1. HERO & ANALYTICAL PROFILE (BENTO HEADER)                 */}
 						{/* ============================================================ */}
-						<section id="sobre" className="flex flex-col gap-6">
+						<section id="sobre" className="hero-fx flex flex-col gap-6">
 							{/* Status Badge & Identity Center */}
 							<div className="flex flex-col items-center text-center max-w-3xl mx-auto gap-3 pt-4">
 								{/* Availability Beacon */}
-								<div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#262a35] border border-[#4edea3]/20 shadow-sm">
+								<div className="hero-in inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#262a35]/80 border border-[#4edea3]/30 shadow-[0_0_30px_-10px_rgba(78,222,163,0.6)]">
 									<span className="relative flex h-2 w-2">
 										<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4edea3] opacity-75"></span>
 										<span className="relative inline-flex rounded-full h-2 w-2 bg-[#4edea3]"></span>
@@ -964,11 +966,13 @@ export default function Home() {
 								</div>
 
 								{/* Avatar with Tech Gradient Ring */}
-								<div className="relative my-2">
-									<div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full p-1.5 bg-gradient-to-tr from-[#4edea3] via-[#4cd7f6] to-[#adc6ff] shadow-2xl flex items-center justify-center">
+								<div className="hero-in relative my-4" style={{ "--d": 1 } as React.CSSProperties}>
+									<div className="avatar-glow" aria-hidden="true" />
+									<div className="avatar-ring" aria-hidden="true" />
+									<div className="w-36 h-36 sm:w-40 sm:h-40 relative rounded-full p-1.5 bg-[#0f131d] shadow-2xl flex items-center justify-center">
 										<div className="w-full h-full rounded-full bg-[#0a0e18] overflow-hidden flex items-center justify-center relative">
 											<Image
-												src="/me.jpg"
+												src="/me.webp"
 												alt="Raquel Rodrigues"
 												fill
 												sizes="(max-width: 640px) 144px, 160px"
@@ -984,17 +988,23 @@ export default function Home() {
 
 								{/* Name & Core Title */}
 								<div className="space-y-1.5">
-									<h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#dfe2f1] tracking-tight">
-										Raquel Rodrigues
+									<h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold text-[#dfe2f1] tracking-[-0.035em] leading-[1.05]">
+										<span className="hero-ln"><span>Raquel</span></span>{" "}
+										<span className="hero-ln"><span className="relative inline-block">
+											<span className="grad-text">Rodrigues</span>
+											<svg className="hero-swoosh" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true">
+												<path d="M4 14 C 80 4, 200 2, 296 10" />
+											</svg>
+										</span></span>
 									</h1>
-									<p className="font-mono text-xs sm:text-sm md:text-base text-[#4edea3] flex items-center justify-center flex-wrap gap-1.5 sm:gap-2 font-medium px-4 text-center leading-relaxed max-w-2xl mx-auto">
+									<p style={{ "--d": 3 } as React.CSSProperties} className="hero-in font-mono text-xs sm:text-sm md:text-base text-[#4edea3] flex items-center justify-center flex-wrap gap-1.5 sm:gap-2 font-medium px-4 text-center leading-relaxed max-w-2xl mx-auto">
 										<span className="text-[#4cd7f6] shrink-0">&gt;</span>
 										<span>{t.role}</span>
 									</p>
 								</div>
 
 								{/* Action Buttons */}
-								<div className="flex flex-wrap items-center justify-center gap-3 mt-3">
+								<div style={{ "--d": 4 } as React.CSSProperties} className="hero-in flex flex-wrap items-center justify-center gap-3 mt-3">
 									<a
 										href="https://www.linkedin.com/in/raquelstefany"
 										target="_blank"
@@ -1015,7 +1025,7 @@ export default function Home() {
 									</a>
 									<a
 										href="#contato"
-										className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#4edea3] text-[#003824] text-sm font-bold hover:bg-[#6ffbbe] shadow-lg shadow-[#10b981]/20 transition-all duration-200"
+										className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#4edea3] text-[#003824] text-sm font-bold hover:bg-[#6ffbbe] shadow-lg shadow-[#10b981]/30 hover:shadow-[0_0_40px_-8px_rgba(78,222,163,0.8)] hover:-translate-y-0.5 transition-all duration-200"
 									>
 										<Send className="w-4 h-4" />
 										<span>{lang === "pt" ? "Contato" : "Contact"}</span>
@@ -1023,10 +1033,23 @@ export default function Home() {
 								</div>
 							</div>
 
+							{/* Faixa de tecnologias em movimento (estilo Kliqo) */}
+							<div style={{ "--d": 5 } as React.CSSProperties} className="hero-in tech-marquee mt-6" aria-label="Stack">
+								<div className="tech-marquee-track">
+									{[0, 1].map((copy) => (
+										<ul key={copy} aria-hidden={copy === 1}>
+											{TECH_MARQUEE.map((tech) => (
+												<li key={tech}>{tech}</li>
+											))}
+										</ul>
+									))}
+								</div>
+							</div>
+
 							{/* Analytical Profile Bento Box */}
 							<div className="grid grid-cols-1 lg:grid-cols-12 gap-5 mt-4 items-stretch">
 								{/* Left Main Bento: Narrative and Focus */}
-								<div className="lg:col-span-7 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden">
+								<div data-reveal className="lg:col-span-7 fx-card bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden">
 									<div className="absolute -right-16 -top-16 w-52 h-52 bg-[#4edea3]/5 rounded-full blur-3xl pointer-events-none" />
 
 									<div className="space-y-4">
@@ -1142,9 +1165,9 @@ export default function Home() {
 								</div>
 
 								{/* Right Mini Bento: Metrics Panel (4 Proportional Cards) */}
-								<div className="lg:col-span-5 flex flex-col gap-3.5 h-full">
+								<div className="stagger lg:col-span-5 flex flex-col gap-3.5 h-full">
 									{/* Metric 1 - Dynamic Experience */}
-									<div className="flex-1 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4edea3]/40 transition-all">
+									<div data-reveal className="flex-1 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4edea3]/40 transition-all">
 										<div className="flex items-center justify-between mb-1.5">
 											<span className="font-mono text-[11px] text-[#4edea3] uppercase font-bold tracking-wider">
 												{t.bento.stat1Title}
@@ -1175,7 +1198,7 @@ export default function Home() {
 									</div>
 
 									{/* Metric 2 - Projects & Solutions */}
-									<div className="flex-1 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4cd7f6]/40 transition-all">
+									<div data-reveal className="flex-1 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4cd7f6]/40 transition-all">
 										<div className="flex items-center justify-between mb-1.5">
 											<span className="font-mono text-[11px] text-[#4cd7f6] uppercase font-bold tracking-wider">
 												{t.bento.stat2Title}
@@ -1205,7 +1228,7 @@ export default function Home() {
 									</div>
 
 									{/* Card 3 - Kliqo.Tech Softhouse & Venture */}
-									<div className="flex-1 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4edea3]/40 transition-all">
+									<div data-reveal className="flex-1 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#4edea3]/40 transition-all">
 										<div className="flex items-center justify-between mb-1.5">
 											<span className="font-mono text-[11px] text-[#4edea3] uppercase font-bold tracking-wider flex items-center gap-1.5">
 												<Rocket className="w-3.5 h-3.5 text-[#4edea3]" />
@@ -1259,7 +1282,7 @@ export default function Home() {
 									</div>
 
 									{/* Card 4 - Strategic Pillars */}
-									<div className="flex-1 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#adc6ff]/40 transition-all">
+									<div data-reveal className="flex-1 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-4 sm:p-4.5 shadow-xl flex flex-col justify-between group hover:bg-[#262a35]/60 hover:border-[#adc6ff]/40 transition-all">
 										<div className="flex items-center justify-between mb-1.5">
 											<span className="font-mono text-[11px] text-[#adc6ff] uppercase font-bold tracking-wider">
 												{t.bento.pillarsTitle}
@@ -1299,8 +1322,8 @@ export default function Home() {
 						{/* ============================================================ */}
 						{/* 2. COMPETÊNCIAS TÉCNICAS (TECH STACK BENTO GRID)            */}
 						{/* ============================================================ */}
-						<section id="habilidades" className="space-y-6">
-							<div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
+						<section id="habilidades" className="section-fx space-y-6">
+							<div data-reveal className="flex flex-col md:flex-row md:items-end justify-between gap-3">
 								<div>
 									<div className="flex items-center gap-2 text-[#4edea3] font-mono text-[13px] font-semibold">
 										<span>{t.skillsSection.tag}</span>
@@ -1315,9 +1338,9 @@ export default function Home() {
 							</div>
 
 							{/* 6 Category Bento Matrix */}
-							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+							<div className="stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 								{/* 1: Linguagens (Span 2) */}
-								<div className="sm:col-span-2 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="sm:col-span-2 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#4edea3]">
@@ -1354,7 +1377,7 @@ export default function Home() {
 								</div>
 
 								{/* 2: Frameworks (Span 2) */}
-								<div className="sm:col-span-2 bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="sm:col-span-2 fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#4cd7f6]">
@@ -1391,7 +1414,7 @@ export default function Home() {
 								</div>
 
 								{/* 3: Banco de Dados */}
-								<div className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#adc6ff]">
@@ -1419,7 +1442,7 @@ export default function Home() {
 								</div>
 
 								{/* 4: Bibliotecas & Dados */}
-								<div className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#4edea3]">
@@ -1453,7 +1476,7 @@ export default function Home() {
 								</div>
 
 								{/* 5: Ferramentas & BI */}
-								<div className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#4cd7f6]">
@@ -1484,7 +1507,7 @@ export default function Home() {
 								</div>
 
 								{/* 6: Versionamento & DevOps */}
-								<div className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+								<div data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl flex flex-col justify-between">
 									<div>
 										<div className="flex items-center justify-between mb-3">
 											<div className="w-10 h-10 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#adc6ff]">
@@ -1516,7 +1539,7 @@ export default function Home() {
 							</div>
 
 							{/* 7: Dedicated Systems Bar */}
-							<div className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-5 md:p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+							<div data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-5 md:p-6 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
 								<div className="flex items-center gap-3.5">
 									<div className="w-11 h-11 rounded-xl bg-[#262a35] border border-[#3c4a42]/60 flex items-center justify-center text-[#4edea3] shrink-0">
 										<Truck className="w-5 h-5" />
@@ -1547,8 +1570,8 @@ export default function Home() {
 						{/* ============================================================ */}
 						{/* 3. PROJETOS EM DESTAQUE (HIGH DENSITY CARDS)                */}
 						{/* ============================================================ */}
-						<section id="projetos" className="space-y-6">
-							<div className="flex flex-col md:flex-row md:items-end justify-between gap-3">
+						<section id="projetos" className="section-fx space-y-6">
+							<div data-reveal className="flex flex-col md:flex-row md:items-end justify-between gap-3">
 								<div>
 									<div className="flex items-center gap-2 text-[#4cd7f6] font-mono text-[13px] font-semibold">
 										<span>{t.projectsSection.tag}</span>
@@ -1562,7 +1585,7 @@ export default function Home() {
 								</p>
 							</div>
 
-							<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+							<div className="stagger grid grid-cols-1 md:grid-cols-3 gap-6">
 								{projectsData.map((project) => {
 									const badgeColorClasses =
 										project.badgeColor === "primary"
@@ -1588,7 +1611,7 @@ export default function Home() {
 									return (
 										<div
 											key={project.id}
-											className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden group hover:border-[#3c4a42] hover:shadow-2xl transition-all duration-300"
+											data-reveal className="fx-card fx-tilt bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl shadow-xl flex flex-col justify-between overflow-hidden group hover:border-[#3c4a42] hover:shadow-2xl transition-all duration-300"
 										>
 											{/* Image Banner */}
 											<div
@@ -1808,7 +1831,7 @@ export default function Home() {
 						{/* ============================================================ */}
 						<section
 							id="experiencia"
-							className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2"
+							className="section-fx grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2"
 						>
 							{/* Left Column: Experiência Profissional */}
 							<div className="lg:col-span-7 space-y-6">
@@ -1826,7 +1849,7 @@ export default function Home() {
 									{experiences.map((exp, idx) => (
 										<div
 											key={idx}
-											className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-6 shadow-xl relative overflow-hidden group hover:border-[#3c4a42] transition-colors"
+											data-reveal className="fx-card bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-6 shadow-xl relative overflow-hidden group hover:border-[#3c4a42] transition-colors"
 										>
 											<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
 												<div className="flex items-center gap-2.5">
@@ -1885,7 +1908,7 @@ export default function Home() {
 									{educations.map((item, idx) => (
 										<div
 											key={idx}
-											className="bg-[#1c1f2a] border border-[#262a35] rounded-2xl p-5 shadow-xl hover:border-[#3c4a42] transition-colors"
+											data-reveal className="fx-card bg-[#1c1f2a]/80 border border-[#262a35] rounded-2xl p-5 shadow-xl hover:border-[#3c4a42] transition-colors"
 										>
 											<div className="flex items-start justify-between gap-2">
 												<h3 className="text-sm sm:text-base font-bold text-[#dfe2f1] leading-snug">
@@ -1945,7 +1968,7 @@ export default function Home() {
 						{/* ============================================================ */}
 						<section
 							id="contato"
-							className="relative rounded-3xl bg-gradient-to-b from-[#1c1f2a] to-[#171b26] border border-[#262a35] p-8 md:p-12 shadow-2xl text-center overflow-hidden"
+							data-reveal className="fx-card relative rounded-3xl bg-gradient-to-b from-[#1c1f2a]/85 to-[#171b26]/85 border border-[#262a35] p-8 md:p-12 shadow-2xl text-center overflow-hidden"
 						>
 							{/* Ambient Radial Accent */}
 							<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#4edea3]/10 via-transparent to-transparent pointer-events-none" />
@@ -2201,7 +2224,7 @@ export default function Home() {
 			{/* ============================================================ */}
 			{/* FOOTER                                                       */}
 			{/* ============================================================ */}
-			<footer className="w-full bg-[#0a0e18] py-12 border-t border-[#1c1f2a]">
+			<footer className="relative w-full bg-[#0a0e18]/70 backdrop-blur-sm py-12 border-t border-[#1c1f2a]">
 				<div className="max-w-[1180px] mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#1c1f2a]">
 						<div className="flex flex-col items-center md:items-start gap-1">
